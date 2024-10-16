@@ -5077,3 +5077,24 @@ footer.dark p {
 .top-contact-btn:last-child {
   margin-left: 10px;
 }
+
+.second-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row nav {
+  margin: 50px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.row nav h2 {
+  font-weight: bold;
+}
+
+.row {
+  width: 850px;
+}
