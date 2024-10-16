@@ -5061,3 +5061,19 @@ footer.dark p {
   text-align: center;
   font-size: 18px;
 }
+
+.submenu {
+  width: max-content;
+}
+
+.submenu h6{
+  margin: 0 10px 5px;
+}
+
+.submenu h6:last-child {
+  margin-top: 7px;
+}
+
+.top-contact-btn:last-child {
+  margin-left: 10px;
+}
