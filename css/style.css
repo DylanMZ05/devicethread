@@ -5092,9 +5092,22 @@ footer.dark p {
 }
 
 .row nav h2 {
+  font-size: 58px;
   font-weight: bold;
 }
 
+
+
 .second-section__row {
   width: 850px;
+}
+
+
+
+.third-section__title h4{
+  font-size: 30px;
+}
+
+.third-section__txt {
+  text-align: center;
 }
