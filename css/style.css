@@ -5114,7 +5114,8 @@ footer.dark p {
   flex-direction: column;
 }
 
-.third-section__title h4{
+.third-section__title h4,
+.fourth-section__title h4{
   font-size: 30px;
 }
 
@@ -5157,3 +5158,4 @@ footer.dark p {
 .font-600 {
   font-weight: 600;
 }
+
