@@ -5209,5 +5209,11 @@ footer.dark p {
 }
 
 @media (max-width: 880px) {
-    
+    .second-section__row {
+      width: auto;
+    }
+
+    .row nav h2 {
+      font-size: 6.5vw;
+    }
 }
