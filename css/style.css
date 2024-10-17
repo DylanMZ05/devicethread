@@ -39,6 +39,11 @@
   00
   Common Styles
 */
+.mobile__dylan {
+  display: none;
+}
+
+
 html,
 body {
   height: 100%;
@@ -4716,10 +4721,7 @@ footer.dark p {
   border-color: #ffffff;
 }
 
- 
 
-@media (min-width: 320px) and (max-width: 767px) {
-}
 @media (min-width: 768px) and (max-width: 1159px) {
   .how-it-works-section{
     display: flex;
@@ -5170,3 +5172,27 @@ footer.dark p {
   font-weight: 600;
 }
 
+@media (max-width: 992px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile__dylan {
+    display: block;
+  }
+
+  .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li:last-child {
+    margin: 0 0 20px;
+  }
+
+  .top-contact-btn:last-child {
+    margin-right: 10px;
+}
+
+}
