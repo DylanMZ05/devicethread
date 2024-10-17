@@ -5143,6 +5143,17 @@ footer.dark p {
   font-size: 18px;
 }
 
+.fourth-section h3 {
+  color: #000;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.fourth-section p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
 .white {
   color: #fff;
 }
