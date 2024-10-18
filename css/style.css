@@ -5253,6 +5253,10 @@ footer.dark p {
 }
 
 @media (max-width: 600px) {
+  .title p {
+    font-size: 15px;
+  }
+
   .top-contact-btn:last-child {
     padding: 14px 8px;
     margin: 0;
@@ -5276,7 +5280,8 @@ footer.dark p {
 
   .row nav h2,
   .title h2 {
-    font-size: 6.5vw;
+    font-size: 8vw;
+    text-align: center;
   }
 
   .third-section__title h4,
@@ -5336,7 +5341,11 @@ footer.dark p {
 }
 
 
-/* BOUTIQUE HOTELS STYLES */
+/* SOLUTION BY TYPE STYLES */
+
+.border-none {
+  border: none !important;
+}
 
 .boutique-hotels__img img {
   margin-left: 16.66666667%;
