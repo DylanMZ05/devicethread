@@ -5192,7 +5192,7 @@ footer.dark p {
   font-weight: 600;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .desktop {
     display: none !important;
   }
@@ -5333,4 +5333,34 @@ footer.dark p {
   .fourth-section p {
     font-size: 16px;
   }
+}
+
+
+/* BOUTIQUE HOTELS STYLES */
+
+.boutique-hotels__img img {
+  margin-left: 16.66666667%;
+  width: 250px;
+}
+
+@media (max-width: 991px) {
+  
+  .boutique-hotels__img img {
+    margin-left: 0;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .boutique-hotels__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .boutique-hotels__img img {
+    width: 35vw;
+  }
+
 }
