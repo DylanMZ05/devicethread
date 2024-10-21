@@ -184,8 +184,8 @@ p .db {
   height: 53px;
 }
 section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: relative;
   overflow: hidden;
   z-index: 10;
@@ -268,7 +268,7 @@ section.colored {
   color: #fff;
 }
 .section-content {
-  padding: 25px 0;
+  padding: 25px 0 0;
 }
 .section-content:before,
 .section-content:after {
@@ -330,7 +330,7 @@ section.colored {
 .title h2 {
   margin-top: 0;
   font-weight: 700;
-  font-size: 58px;
+  font-size: 46px;
 }
 .title h2.upper {
   font-size: 48px;
@@ -1375,7 +1375,7 @@ section.dark .icon-box-small.boxed {
 }
 .slide-content h1 {
   font-weight: 700;
-  font-size: 90px;
+  font-size: 58px;
   margin: 25px 0;
 }
 .slide-content h1.upper {
@@ -2073,9 +2073,7 @@ section.dark .icon-box-small.boxed {
   text-align: center;
   min-height: 170px;
 }
-#testimonials-slider .slides {
-  margin-bottom: 20px;
-}
+
 #testimonials-slider .slides blockquote footer {
   margin-top: 15px;
 }
@@ -4451,10 +4449,7 @@ footer.dark p {
   .slide-content.bold-text h1.upper {
     font-size: 45px;
   }
-  .slide-content h1 {
-    /* font-size: 55px; */
-    font-size: 28px;
-  }
+
   .slide-content h1.upper {
     font-size: 45px;
     letter-spacing: 4px;
@@ -5068,9 +5063,9 @@ footer.dark p {
 }
 
 .text-center h6 {
-  width: 70vw;
+  width: 45vw;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .submenu {
@@ -5097,13 +5092,13 @@ footer.dark p {
 }
 
 .row nav {
-  margin: 100px 0 20px;
+  margin: 40px 0 20px;
   display: flex;
   justify-content: center;
 }
 
 .row nav h2 {
-  font-size: 58px;
+  font-size: 46px;
   font-weight: bold;
 }
 
@@ -5216,26 +5211,27 @@ footer.dark p {
   }
 
   .first-section h1 {
-    font-size: 10vw;
+
   }
 
   .first-section h3 {
-    font-size: 5vw;
-  }
-
-  .first-section h6 {
-    font-size: 2.7vw;
   }
 }
 
 @media (max-width: 880px) {
+  .text-center h6 {
+    width: 60vw;
+    text-align: center;
+    font-size: 16px;
+  }
+
     .second-section__row {
       width: auto;
     }
 
     .row nav h2,
     .title h2 {
-      font-size: 6.5vw;
+      font-size: 38px;
     }
 
     .third-section__title h4 {
@@ -5270,17 +5266,17 @@ footer.dark p {
     font-size: 22px;
   }
 
-  .first-section h6 {
+  .text-center h6 {
+    width: 80vw;
+    text-align: center;
     font-size: 16px;
   }
-
   .second-section__row {
     width: auto;
   }
 
   .row nav h2,
   .title h2 {
-    font-size: 8vw;
     text-align: center;
   }
 
