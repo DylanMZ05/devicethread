@@ -5248,6 +5248,16 @@ footer.dark p {
     }
 }
 
+@media (max-width: 767px) {
+  .border-bottom-dylan {
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .fourth-section nav {
+    margin: 0 15px;
+  }
+}
+
 @media (max-width: 600px) {
   .title p {
     font-size: 15px;
