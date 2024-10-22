@@ -5063,9 +5063,9 @@ footer.dark p {
 }
 
 .text-center h6 {
-  width: 45vw;
+  width: 1000px;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   margin: 15px 0 0;
 }
 
@@ -5223,7 +5223,7 @@ footer.dark p {
   .text-center h6 {
     width: 60vw;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
   }
 
     .second-section__row {
@@ -5280,7 +5280,7 @@ footer.dark p {
   .text-center h6 {
     width: 80vw;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
   }
   .second-section__row {
     width: auto;
