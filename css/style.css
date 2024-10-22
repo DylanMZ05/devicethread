@@ -5174,6 +5174,16 @@ footer.dark p {
     line-height: 20px;
 }
 
+.devicethread-vs {
+  font-size: 32px;
+  color: #191b1d;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.whydifferent-text div {
+  text-align: start;
+}
+
 .fourth-section h3 {
   color: #000;
   font-weight: bold;
