@@ -5382,12 +5382,40 @@ footer.dark p {
   width: 250px;
 }
 
+.videos-section {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+  max-width: 80%; /* Cambia este valor para ajustar el tamaño */
+  margin: 0 auto; /* Centra el video */
+}
+
+.videos-section nav {
+  max-width: 335px;
+  height: 300px;
+  margin: 0 30px;
+
+  padding: 15px;
+
+  border: 1px solid #e7e7e7;
+}
+
 @media (max-width: 991px) {
   
   .boutique-hotels__img img {
     margin-left: 0;
   }
 
+  .videos-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .videos-section nav {
+    margin: 15px;
+  }
 }
 
 @media (max-width: 800px) {
