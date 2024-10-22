@@ -5043,7 +5043,7 @@ footer.dark p {
 
 
 
-
+/* NEW DYLAN'S STYLES*/
 
 
 
@@ -5347,6 +5347,29 @@ footer.dark p {
   }
 }
 
+/* SOLUTIONS */
+
+.ib-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ib-content p {
+  width: 165px;
+}
+
+.pt-50-dylan {
+  height: 500px;
+  padding: 0;
+}
+
+.slide-dylan li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 /* SOLUTION BY TYPE STYLES */
 
