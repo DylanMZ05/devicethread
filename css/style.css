@@ -5046,6 +5046,11 @@ footer.dark p {
 /* NEW DYLAN'S STYLES*/
 
 
+.first-section__txt {
+  display: flex;
+  justify-content: center;
+}
+
 
 .text-center > .container {
 
