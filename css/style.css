@@ -5047,10 +5047,18 @@ footer.dark p {
 
 
 .first-section__txt {
+
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: start;
 }
 
+.first-section__txt div {
+  width: 300px;
+}
 
 .text-center > .container {
 
@@ -5068,7 +5076,7 @@ footer.dark p {
 }
 
 .text-center h6 {
-  width: 1000px;
+  width: 850px;
   text-align: center;
   font-size: 14px;
   margin: 15px 0 0;
