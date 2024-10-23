@@ -5491,6 +5491,13 @@ footer.dark p {
   margin: 50px 10px;
 }
 
+.guest-sub-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .guest div {
   margin: 0 30px 0;
   max-width: 400px;
@@ -5531,6 +5538,11 @@ footer.dark p {
 .sub-card:hover i {
   color: #ffffff;
 }
+
+.sub-card-2 hr {
+  margin-top: 0;
+}
+
 
 .third-section__guests {
   display: flex;
