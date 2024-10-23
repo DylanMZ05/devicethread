@@ -5454,3 +5454,68 @@ footer.dark p {
   }
 
 }
+
+/* SMART ACCESS DYLAN */ 
+
+.icon-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-big > i {
+  font-size: 100px;
+}
+
+.third-section__card-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño (50% cada una) */
+  grid-template-rows: auto 1fr; /* Una fila automática para .nav_1 y una fila para .nav_2 y .nav_3 */
+  gap: 20px; /* Espacio entre las secciones, puedes ajustar según prefieras */
+}
+
+.nav_1 {
+  grid-column: 1 / 3; /* Hace que ocupe las dos columnas (100%) */
+  width: 100%;
+}
+
+.nav_2, .nav_3 {
+  width: 100%; /* Asegura que ocupen todo el ancho de la columna */
+}
+
+.guest {
+  display: flex;
+  justify-content: center;
+}
+
+.guest div {
+  margin: 0 30px 0;
+  max-width: 400px;
+}
+
+.guest h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.guest h4 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+
+
+.third-section__guests {
+  display: flex;
+  justify-content: end;
+}
+
+.third-section__guests div{
+  width: 20%;
+  padding: 15px 5px 0;
+}
+
+.third-section__guests p {
+  margin-bottom: 5px;
+}
