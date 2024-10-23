@@ -5468,25 +5468,27 @@ footer.dark p {
 }
 
 .third-section__card-container {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño (50% cada una) */
-  grid-template-rows: auto 1fr; /* Una fila automática para .nav_1 y una fila para .nav_2 y .nav_3 */
-  gap: 20px; /* Espacio entre las secciones, puedes ajustar según prefieras */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-bottom: 30px;
 }
 
 .nav_1 {
-  grid-column: 1 / 3; /* Hace que ocupe las dos columnas (100%) */
-  width: 100%;
+  display: block;
 }
 
-.nav_2, .nav_3 {
-  width: 100%; /* Asegura que ocupen todo el ancho de la columna */
+.nav_2 {
+  display: flex;
 }
 
 .guest {
   display: flex;
   justify-content: center;
+
+  margin: 50px 10px;
 }
 
 .guest div {
@@ -5504,7 +5506,31 @@ footer.dark p {
   font-weight: 800;
 }
 
+.sub-card p {
+  max-width: 500px;
+}
 
+.sub-card {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición para el fondo y el color */
+  max-width: 300px;
+}
+
+.sub-card h4,
+.sub-card p,
+.sub-card hr,
+.sub-card i {
+  transition: color 0.3s ease, background-color 0.3s ease; /* Transición para el texto y <hr> */
+}
+
+.sub-card:hover {
+  background-color: #2268FF;
+}
+
+.sub-card:hover h4,
+.sub-card:hover p,
+.sub-card:hover i {
+  color: #ffffff;
+}
 
 .third-section__guests {
   display: flex;
