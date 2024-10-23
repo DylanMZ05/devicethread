@@ -5565,3 +5565,28 @@ footer.dark p {
 .third-section__guests p {
   margin-bottom: 5px;
 }
+
+@media (max-width: 767px) {
+  .guest img {
+    display: none;
+  }
+
+  .guest-sub-div {
+    align-items: center;
+    text-align: center;
+  }
+
+  .five-section {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav_2 {
+    display: block;
+  }
+
+  .sub-card {
+    border: none !important;
+  }
+}
