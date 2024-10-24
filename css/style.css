@@ -5590,3 +5590,30 @@ footer.dark p {
     border: none !important;
   }
 }
+
+/* ABOUT US */
+
+.about-us__first-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 60vh;
+}
+
+.timeline {
+  margin-left: 100px;
+}
+
+@media (max-width: 767px) {
+  .title-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .timeline {
+    margin: 0;
+  }
+}
