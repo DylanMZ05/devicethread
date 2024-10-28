@@ -5425,6 +5425,17 @@ footer.dark p {
   border: 1px solid #e7e7e7;
 }
 
+@media (max-width: 1200px) {
+  #header-container {
+    width: 100vw;
+  }
+
+  #topnav .navigation-menu > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 @media (max-width: 991px) {
   
   .boutique-hotels__img img {
