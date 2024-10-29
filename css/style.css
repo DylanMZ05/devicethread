@@ -5190,10 +5190,12 @@ footer.dark p {
 .devicethread-lynx div {
   display: flex;
   align-items: center;  
+
+  height: 42px;
 }
 
 .devicethread-lynx p {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -5234,7 +5236,49 @@ footer.dark p {
 }
 
 .whydifferent-text p {
-  font-size: 14px;
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.video-card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-card {
+  width: 300px;
+  height: 350px;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+  border-radius: 10px;
+
+  margin: 50px 10px;
+}
+
+.video-card img {
+  border-radius: 10px 10px 0px 0px;
+
+  width: 100%;
+  height: auto;
+}
+
+.video-card h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 20px 20px 10px;
+
+  color: #2268FF;
+}
+
+.video-card p {
+  font-size: 18px;
+  font-weight: 800;
+
+  color: #000;
+
+  margin: 10px 20px 20px;
 }
 
 .fourth-section h3 {
