@@ -5249,6 +5249,11 @@ footer.dark p {
   margin: 6px 0;
 }
 
+.customers-say__section {
+  background-image: url(/images/bg/hotelPommier.jpg);
+  background-position: center 35%;
+}
+
 .video-card__container {
   display: flex;
   flex-wrap: wrap;
