@@ -5341,6 +5341,90 @@ footer.dark p {
   margin-top: 5px;
 }
 
+.choices-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  width: 90vw;
+}
+
+.choices-container h5 {
+  font-size: 24px;
+  font-weight: 600;
+
+  height: 55px;
+
+  color: #2268FF;
+
+}
+
+.sub-title {
+  height: 43px;
+}
+
+.choices {
+  width: 30vw;
+  padding: 15px;
+
+  height: 550px;
+}
+
+.choices-sub {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+  height: 400px;
+}
+
+.choices-sub p {
+  margin: 0;
+}
+
+.choices div {
+  margin: 5px 0;
+}
+
+.choice-option {
+  margin: 20px 0;
+}
+
+.choice-option input[type="checkbox"] {
+  display: none;
+}
+
+.choice-option label {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #000;
+  border: 2px solid #2268FF;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.choice-option input[type="checkbox"]:checked + label {
+  background-color: #2268FF;
+  color: white;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.border-blue-left {
+  border-left: 2px solid #2268FF;
+}
+
 @media (max-width: 1288px) {
   .video-card {
     margin: 50px 5vw;
