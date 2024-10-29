@@ -5174,14 +5174,67 @@ footer.dark p {
     line-height: 20px;
 }
 
-.devicethread-vs {
-  font-size: 26px;
+.devicethread-lynx {
   color: #191b1d;
   font-family: 'Montserrat', sans-serif;
+
+  text-align: start;
+}
+
+.devicethread-lynx__title {
+  text-align: center;
+  font-size: 23px;
+}
+
+
+.devicethread-lynx div {
+  display: flex;
+  align-items: center;  
+}
+
+.devicethread-lynx p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.devicethread-lynx i {
+  font-size: 28px;
+
+  margin-top: 7px;
+  margin-right: 5px;
+  color: #2268FF;
+}
+
+.device-vs-compe h2 {
+  font-size: 36px;
+}
+
+.device-vs-compe p {
+  font-size: 14px;
 }
 
 .whydifferent-text div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
   text-align: start;
+}
+
+.whydifferent-text h2 {
+  font-size: 36px;
+}
+
+.whydifferent-text i {
+  font-size: 28px;
+
+  margin-top: 7.5px;
+  margin-right: 5px;
+  color: #2268FF;
+}
+
+.whydifferent-text p {
+  font-size: 14px;
 }
 
 .fourth-section h3 {
