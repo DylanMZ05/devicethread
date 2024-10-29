@@ -5174,6 +5174,15 @@ footer.dark p {
     line-height: 20px;
 }
 
+.why-us-title h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.why-us-title p {
+  font-size: 16px;
+}
+
 .devicethread-lynx {
   color: #191b1d;
   font-family: 'Montserrat', sans-serif;
@@ -5191,7 +5200,7 @@ footer.dark p {
   display: flex;
   align-items: center;  
 
-  height: 42px;
+  height: 46px;
 }
 
 .devicethread-lynx p {
@@ -5212,7 +5221,7 @@ footer.dark p {
 }
 
 .device-vs-compe p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .whydifferent-text div {
@@ -5264,6 +5273,10 @@ footer.dark p {
   height: auto;
 }
 
+.video-card i {
+  color: #00cc77;
+}
+
 .video-card h3 {
   font-size: 12px;
   font-weight: 600;
@@ -5306,6 +5319,14 @@ footer.dark p {
 
 .font-600 {
   font-weight: 600;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mt-5 {
+  margin-top: 5px;
 }
 
 @media (max-width: 991px) {
