@@ -5250,10 +5250,15 @@ footer.dark p {
 }
 
 .customers-say__section {
-  background-image: url(/images/bg/hotelPommier.jpg);
+  background-image: url(/images/DYLAN-ADDS/hotelPommier.jpg);
   background-position: center 35%;
 
   padding: 0;
+}
+
+.black-cover {
+  background-color: #0000008f;
+  color: #fff;
 }
 
 .video-card__container {
