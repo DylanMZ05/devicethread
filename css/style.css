@@ -5251,8 +5251,12 @@ footer.dark p {
 
 .video-card__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+}
+
+.videos-title h3 {
+  font-size: 36px;
 }
 
 .video-card {
@@ -5271,10 +5275,6 @@ footer.dark p {
 
   width: 100%;
   height: auto;
-}
-
-.video-card i {
-  color: #00cc77;
 }
 
 .video-card h3 {
@@ -5327,6 +5327,12 @@ footer.dark p {
 
 .mt-5 {
   margin-top: 5px;
+}
+
+@media (max-width: 1288px) {
+  .video-card {
+    margin: 50px 5vw;
+  }
 }
 
 @media (max-width: 991px) {
@@ -5387,6 +5393,10 @@ footer.dark p {
 
     .fourth-section nav div {
       width: 90vw;
+    }
+
+    .video-card {
+      margin: 50px 1vw;
     }
 }
 
@@ -5459,6 +5469,10 @@ footer.dark p {
 
   .margin-left {
     margin-left: 10px !important;
+  }
+
+  .video-card {
+    margin: 1vw;
   }
 }
 
