@@ -5252,6 +5252,8 @@ footer.dark p {
 .customers-say__section {
   background-image: url(/images/bg/hotelPommier.jpg);
   background-position: center 35%;
+
+  padding: 0;
 }
 
 .video-card__container {
