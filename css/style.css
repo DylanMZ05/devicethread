@@ -5345,6 +5345,8 @@ footer.dark p {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 100vh;
 }
 
 .choices-container {
@@ -5358,6 +5360,10 @@ footer.dark p {
 }
 
 .choices-container h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 24px;
   font-weight: 600;
 
@@ -5419,6 +5425,28 @@ footer.dark p {
   color: white;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
+}
+
+.choices-section__button {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices-section__button a {
+  color: #fff;
+  background-color: #2268FF;
+  
+  margin-top: 50px;
+  padding: 15px 30px;
+}
+
+.choices-section__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .border-blue-left {
@@ -5977,3 +6005,4 @@ footer.dark p {
 .header-container {
   padding: 0 2.5vw;
 }
+

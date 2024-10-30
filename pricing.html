@@ -157,15 +157,13 @@
 
 <!-- About-->
 <section class="choices-section">
-  <div>
-    <div>
-      <div>
+      <div class="choices-section__container">
         <div class="title center">
           <h4>Build the right plan for your business</h4>
         </div>
         <div class="choices-container">
 
-          <div class="choices">
+            <div class="choices">
             <h5>Core Features</h5>
               <div class="sub-title">
                 <p>All plans come with standard
@@ -235,11 +233,13 @@
                   smart host</p>
                 </div>
                 <div class="choices-sub">
-                  <div>
-                    <p>Hardware Bundling</p>
+                  <div class="choice-option">
+                    <input type="checkbox" id="hardwareBundling" name="hardwareBundling" />
+                    <label for="hardwareBundling">Hardware Bundling</label>
                   </div>
-                  <div>
-                    <p>Financing</p>
+                  <div class="choice-option">
+                    <input type="checkbox" id="financing" name="financing" />
+                    <label for="financing">Financing</label>
                   </div>
                 </div>
             </div>
@@ -251,25 +251,84 @@
                   to customer success</p>
                 </div>
                 <div class="choices-sub">
-                  <div>
-                    <p>Onboarding solutions</p>
+                  <div class="choice-option">
+                    <input type="checkbox" id="onboardingSolutions" name="onboardingSolutions" />
+                    <label for="onboardingSolutions">Onboarding Solutions</label>
                   </div>
-                  <div>
-                    <p>24/7 IT Support</p>
+                  <div class="choice-option">
+                    <input type="checkbox" id="itSupport" name="itSupport" />
+                    <label for="itSupport">24/7 IT Support</label>
                   </div>
-                  <div>
-                    <p>Business Review</p>
+                  <div class="choice-option">
+                    <input type="checkbox" id="businessReview" name="businessReview" />
+                    <label for="businessReview">Business Review</label>
                   </div>
                 </div>
             </div>
         </div>
+
+        <div class="choices-section__button">
+          <a href="">GET CUOTE</a>
+        </div>
+
+
+      </div>
+</section>
+
+<section class="customers-say__section">
+  <div class="black-cover pt-50 pb-50">
+    <div class="container">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="title txt-sm-center txt-xs-center">
+              <h3>Learn how Hotel Pommier gained 10x value with the devicethread® SmartAccess solution<sup>&nbsp;</sup> <span class="red-dot"></span></h3>
+              <hr>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-12 title center mb-50">
+            <div class="row pl-50 mobile-p-0">
+              <h5><em>Success Story!</em></h5>
+              <button type="button" class="btn btn-color" data-toggle="modal" data-target="#myModal2">Download</button>
+            </div>
+
+          </div>
+        <!-- end of row-->
+        </div>
       </div>
     </div>
+    <!-- end of container-->
   </div>
 </section>
 
+<div>
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 24px;">
+
+        <!-- modal header  -->
+        <div class="modal-header">
+          <button type="button" class="close ti-close" data-dismiss="modal" style="font-size: 22px;">  </button>
+          <h3 class="modal-title"> Success Story!</h3>
+        </div>
+
+        <!-- begin modal body content  -->
+        <div class="modal-body pb-0">
+
+          <p>We are excited to share the success story of a hotelier like you!  In addition, we would be happy to share that other hoteliers are implementing smart hospitality within their property(ies).</p>
+
+          <iframe aria-label='Success Story!' frameborder="0" style="height:480px;width:99%;border:none;" src='https://forms.zohopublic.com/akhil4/form/Newsletter/formperma/dDE_FbKTKqTjEXyEx8eNOBzZCbVkj8aDTc8j89KHUxI'></iframe>
+
+        </div>
 
 
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Footer-->
 <footer id="footer-widgets">
