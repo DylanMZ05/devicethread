@@ -6006,3 +6006,36 @@ footer.dark p {
   padding: 0 2.5vw;
 }
 
+
+
+.quote-form-group {
+  margin-bottom: 15px;
+}
+
+.quote-form-label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+.quote-form-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.quote-form-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quote-form-button:hover {
+  background-color: #45a049;
+}

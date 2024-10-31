@@ -761,3 +761,41 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 });
+
+
+/* DYLAN ADDS */
+
+document.getElementById("quoteForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  alert("¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.");
+  closeModal(); // Cerrar el modal después de enviar
+});
+
+function openQuoteModal() {
+  // Recopilar opciones seleccionadas
+  const options = [];
+  document.querySelectorAll('.choices-sub input[type="checkbox"]:checked').forEach((checkbox) => {
+    options.push(checkbox.nextElementSibling.innerText); // Agregar el texto del label
+  });
+
+  // Verificar si se seleccionaron opciones
+  if (options.length === 0) {
+    alert("Por favor, selecciona al menos una opción.");
+    return;
+  }
+
+  // Abrir el modal ahora que hay al menos una opción seleccionada
+  $('#myModal-10').modal('show'); // Esto depende de que uses jQuery y Bootstrap
+
+  // Agregar un evento de envío al formulario
+  document.getElementById("quoteForm").onsubmit = function(event) {
+    event.preventDefault(); // Evitar el envío predeterminado
+
+    // Obtener el nombre y el email
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    // Enviar el correo con la información
+    sendQuoteRequest(name, email, options);
+  };
+}
