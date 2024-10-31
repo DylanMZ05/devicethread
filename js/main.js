@@ -765,63 +765,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* DYLAN ADDS */
 
-function openQuoteModal() {
-  // Recopilar opciones seleccionadas
-  const options = [];
-  document.querySelectorAll('.choices-sub input[type="checkbox"]:checked').forEach((checkbox) => {
-    options.push(checkbox.nextElementSibling.innerText); // Agregar el texto del label
+const publicKey = 'BLQuDFBEADiFyZexA';
+emailjs.init(publicKey);
+
+const btn = document.getElementById('button');
+document.getElementById('form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Evitar el comportamiento por defecto
+
+  // Captura las opciones seleccionadas
+  const selectedOptions = [];
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  checkboxes.forEach((checkbox) => {
+    selectedOptions.push(checkbox.nextElementSibling.innerText); // Obtiene el texto del label correspondiente
   });
 
-  // Verificar si se seleccionaron opciones
-  if (options.length === 0) {
-    alert("Por favor, selecciona al menos una opción.");
-    return;
-  }
+  // Construye el mensaje
+  const message = `Hola! Mi nombre es ${document.getElementById('from_name').value}.\n\nMe gustaría obtener la cuota de:\n${selectedOptions.join(', ')}.`;
 
-  // Abrir el modal ahora que hay al menos una opción seleccionada
-  $('#myModal-10').modal('show'); 
+  // Asignar el mensaje al formulario antes de enviarlo
+  document.getElementById('message').value = message;
 
-  // Agregar un evento de envío al formulario
-  document.getElementById("quoteForm").onsubmit = function(event) {
-    event.preventDefault(); // Evitar el envío predeterminado
+  btn.value = 'Sending...';
 
-    // Obtener el nombre y el email
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+  const serviceID = 'default_service';
+  const templateID = 'template_77akf6i';
 
-    // Validar nombre y email
-    if (!name || !email) {
-      alert("Por favor, completa el nombre y el correo electrónico.");
-      return;
-    }
-
-    // Crear datos para enviar
-    const formData = {
-      name: name,
-      email: email,
-      options: options
-    };
-
-    // Enviar la solicitud a enviar_correo.php
-    fetch('enviar_correo.php', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    })
-    .then(response => response.text())
-    .then(result => {
-      alert("¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.");
-      closeModal(); // Cerrar el modal después de enviar
-    })
-    .catch(error => {
-      console.error("Error al enviar la solicitud:", error);
-      alert("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+      closeModal(); // Cerrar el modal después de enviar el formulario
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err)); // Mostrar el error si hay uno
     });
-  };
-}
+});
 
-document.getElementById("quoteForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  alert("¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.");
-  closeModal(); // Cerrar el modal después de enviar
+document.getElementById('getQuoteButton').addEventListener('click', function() {
+  // Verificar si al menos un checkbox está seleccionado
+  const checkboxes = document.querySelectorAll('.choices input[type="checkbox"]');
+  const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+  if (isChecked) {
+      // Si hay al menos un checkbox seleccionado, mostrar el modal
+      $('#myModal-10').modal('show');
+  } else {
+      // Si no hay selección, mostrar un mensaje
+      alert('Por favor, selecciona al menos una opción antes de continuar.');
+  }
 });

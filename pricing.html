@@ -269,12 +269,63 @@
         </div>
 
         <div class="choices-section__button mt-25">
-          <button type="button" class="btn btn-color" onclick="openQuoteModal()">GET QUOTE</button>
+          <button type="button" class="btn btn-color" id="getQuoteButton">GET QUOTE</button>
         </div>
+
 
 
       </div>
 </section>
+
+<div>
+  <div class="modal fade" id="myModal-10" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 24px;">
+
+        <!-- modal header  -->
+        <div class="modal-header">
+          <button type="button" class="close ti-close" data-dismiss="modal" style="font-size: 22px;">  </button>
+          <h3 class="modal-title"> Success Story!</h3>
+        </div>
+
+        <!-- begin modal body content  -->
+        <div class="modal-body pb-0">
+
+          <p>We are excited to share the success story of a hotelier like you!  In addition, we would be happy to share that other hoteliers are implementing smart hospitality within their property(ies).</p>
+
+          <form id="form">
+            <div class="field">
+              <label for="from_name">Name</label>
+              <input type="text" name="from_name" id="from_name">
+            </div>
+            <div class="field">
+              <label for="message">message</label>
+              <input type="text" name="message" id="message">
+            </div>
+            <div class="field">
+              <label for="reply_to">email</label>
+              <input type="text" name="reply_to" id="reply_to">
+            </div>
+          
+            <input type="submit" id="button" value="Send Email" >
+          </form>
+          
+          <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+          
+          <script type="text/javascript">
+            emailjs.init('BLQuDFBEADiFyZexA')
+          </script>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="customers-say__section">
   <div class="black-cover pt-50 pb-50">
@@ -303,42 +354,7 @@
   </div>
 </section>
 
-<div>
-  <div class="modal fade" id="myModal-10" role="dialog">
-    <div class="modal-dialog">
 
-      <!-- Modal content-->
-      <div class="modal-content" style="border-radius: 24px;">
-
-        <!-- modal header  -->
-        <div class="modal-header">
-          <button type="button" class="close ti-close" data-dismiss="modal" style="font-size: 22px;">  </button>
-          <h3 class="modal-title"> Get Quote!</h3>
-        </div>
-
-        <!-- begin modal body content  -->
-        <div class="modal-body pb-0">
-
-          <p>Text to get quote</p>
-
-          <form id="quoteForm" class="quote-form">
-            <div class="quote-form-group">
-              <label for="name" class="quote-form-label">Nombre y apellido:</label>
-              <input type="text" id="name" name="name" class="quote-form-input" placeholder="Escribe tu nombre completo" required>
-            </div>
-            <div class="quote-form-group">
-              <label for="email" class="quote-form-label">Email:</label>
-              <input type="email" id="email" name="email" class="quote-form-input" placeholder="Escribe tu correo electrónico" required>
-            </div>
-            <button type="submit" class="quote-form-button">Enviar</button>
-          </form>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-</div>
 
 <div>
   <div class="modal fade" id="myModal2" role="dialog">
@@ -473,6 +489,8 @@
   <!-- end of container--> 
 </footer>
 <!-- end of footer--> 
+ <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script> 
 <script type="text/javascript" src="js/bundle.js"></script> 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
