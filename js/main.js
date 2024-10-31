@@ -765,12 +765,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* DYLAN ADDS */
 
-document.getElementById("quoteForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  alert("¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.");
-  closeModal(); // Cerrar el modal después de enviar
-});
-
 function openQuoteModal() {
   // Recopilar opciones seleccionadas
   const options = [];
@@ -785,7 +779,7 @@ function openQuoteModal() {
   }
 
   // Abrir el modal ahora que hay al menos una opción seleccionada
-  $('#myModal-10').modal('show'); // Esto depende de que uses jQuery y Bootstrap
+  $('#myModal-10').modal('show'); 
 
   // Agregar un evento de envío al formulario
   document.getElementById("quoteForm").onsubmit = function(event) {
@@ -795,7 +789,39 @@ function openQuoteModal() {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
 
-    // Enviar el correo con la información
-    sendQuoteRequest(name, email, options);
+    // Validar nombre y email
+    if (!name || !email) {
+      alert("Por favor, completa el nombre y el correo electrónico.");
+      return;
+    }
+
+    // Crear datos para enviar
+    const formData = {
+      name: name,
+      email: email,
+      options: options
+    };
+
+    // Enviar la solicitud a enviar_correo.php
+    fetch('enviar_correo.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.text())
+    .then(result => {
+      alert("¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.");
+      closeModal(); // Cerrar el modal después de enviar
+    })
+    .catch(error => {
+      console.error("Error al enviar la solicitud:", error);
+      alert("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
+    });
   };
 }
+
+document.getElementById("quoteForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  alert("¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.");
+  closeModal(); // Cerrar el modal después de enviar
+});
