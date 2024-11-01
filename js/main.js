@@ -766,51 +766,69 @@ document.addEventListener('DOMContentLoaded', function () {
 /* DYLAN ADDS */
 
 const publicKey = 'BLQuDFBEADiFyZexA';
-emailjs.init(publicKey);
+    emailjs.init(publicKey);
 
-const btn = document.getElementById('button');
-document.getElementById('form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Evitar el comportamiento por defecto
+    const btn = document.getElementById('button');
+    document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evitar el comportamiento por defecto
 
-  // Captura las opciones seleccionadas
-  const selectedOptions = [];
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-  checkboxes.forEach((checkbox) => {
-    selectedOptions.push(checkbox.nextElementSibling.innerText); // Obtiene el texto del label correspondiente
-  });
+      // Validar que los campos de nombre y email estén completados
+      const fromName = document.getElementById('from_name').value.trim();
+      const replyTo = document.getElementById('reply_to').value.trim();
+      
+      if (!fromName || !replyTo) {
+        alert('Por favor, completa todos los campos requeridos.');
+        return;
+      }
 
-  // Construye el mensaje
-  const message = `Hola! Mi nombre es ${document.getElementById('from_name').value}.\n\nMe gustaría obtener la cuota de:\n${selectedOptions.join(', ')}.`;
+      // Validar formato del email
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(replyTo)) {
+        alert('Por favor, ingresa un email válido.');
+        return;
+      }
 
-  // Asignar el mensaje al formulario antes de enviarlo
-  document.getElementById('message').value = message;
+      // Captura las opciones seleccionadas
+      const selectedOptions = [];
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      checkboxes.forEach((checkbox) => {
+        selectedOptions.push(checkbox.nextElementSibling.innerText); // Obtiene el texto del label correspondiente
+      });
 
-  btn.value = 'Sending...';
+      // Construye el mensaje
+      const message = `Hello! My name is ${fromName}. \n\nI would like to get the quote of: \n${selectedOptions.join(' - ')}.`;
 
-  const serviceID = 'default_service';
-  const templateID = 'template_77akf6i';
+      // Asignar el mensaje al formulario antes de enviarlo
+      document.getElementById('message').value = message;
 
-  emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-      closeModal(); // Cerrar el modal después de enviar el formulario
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err)); // Mostrar el error si hay uno
+      btn.value = 'Sending...';
+
+      const serviceID = 'default_service';
+      const templateID = 'template_77akf6i';
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Send Email';
+          alert('Quote sent!');
+
+          // Redirigir a "index.html" después de enviar el formulario
+          window.location.href = "index.html";
+        }, (err) => {
+          btn.value = 'Send Email';
+          alert(JSON.stringify(err)); // Mostrar el error si hay uno
+        });
     });
-});
 
-document.getElementById('getQuoteButton').addEventListener('click', function() {
-  // Verificar si al menos un checkbox está seleccionado
-  const checkboxes = document.querySelectorAll('.choices input[type="checkbox"]');
-  const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+    document.getElementById('getQuoteButton').addEventListener('click', function() {
+      // Verificar si al menos un checkbox está seleccionado
+      const checkboxes = document.querySelectorAll('.choices input[type="checkbox"]');
+      const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
 
-  if (isChecked) {
-      // Si hay al menos un checkbox seleccionado, mostrar el modal
-      $('#myModal-10').modal('show');
-  } else {
-      // Si no hay selección, mostrar un mensaje
-      alert('Por favor, selecciona al menos una opción antes de continuar.');
-  }
-});
+      if (isChecked) {
+        // Si hay al menos un checkbox seleccionado, mostrar el modal
+        $('#myModal-10').modal('show');
+      } else {
+        // Si no hay selección, mostrar un mensaje
+        alert('Please select at least one option before continuing.');
+      }
+    });

@@ -5346,13 +5346,13 @@ footer.dark p {
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
 }
 
 .choices-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   text-align: center;
 
@@ -5378,7 +5378,7 @@ footer.dark p {
 }
 
 .choices {
-  width: 30vw;
+  width: 22vw;
   padding: 15px;
 
   height: 550px;
@@ -5418,6 +5418,7 @@ footer.dark p {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 200px;
 }
 
 .choice-option input[type="checkbox"]:checked + label {
@@ -5453,6 +5454,29 @@ footer.dark p {
   border-left: 2px solid #2268FF;
 }
 
+.field label{
+  width: 400px;
+}
+
+.field input {
+  margin: 0 0 10px;
+}
+
+.input-get-quote {
+  margin: 10px 0 20px;
+  background: #2268ff;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  line-height: 20px;
+  border: 1px solid #0000001a;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
 @media (max-width: 1288px) {
   .video-card {
     margin: 50px 5vw;
@@ -5482,11 +5506,30 @@ footer.dark p {
     margin-right: 10px;
   }
 
-  .first-section h1 {
-
+  .choices-container {
+    align-items: start;
   }
 
-  .first-section h3 {
+  .choices {
+    width: 45%;
+    margin: 0 2.5%;
+    height: max-content;
+  }
+
+  .choices-sub {
+    height: max-content;
+  }
+
+  .border-blue-left {
+    border: none;
+  }
+
+  .choice-option label {
+    width: 300px;
+  }
+
+  .mb-14 {
+    margin-bottom: 14px;
   }
 }
 
@@ -5846,6 +5889,20 @@ footer.dark p {
   .five-section {
     display: none;
   }
+
+  .choices {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .choices-container h5 {
+    margin-top: 0;
+  }
+
+  .choice-option label {
+    width: 300px;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -5855,6 +5912,11 @@ footer.dark p {
 
   .sub-card {
     border: none !important;
+  }
+
+  .choice-option label {
+    width: 80vw;
+    max-width: 300px;
   }
 }
 
