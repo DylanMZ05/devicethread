@@ -5356,7 +5356,7 @@ footer.dark p {
 
   text-align: center;
 
-  width: 90vw;
+  width: 95vw;
 }
 
 .choices-container h5 {
@@ -5378,10 +5378,11 @@ footer.dark p {
 }
 
 .choices {
-  width: 22vw;
+  width: 23.5vw;
   padding: 15px;
 
   height: 550px;
+  max-width: 350px;
 }
 
 .choices-sub {
@@ -5455,11 +5456,11 @@ footer.dark p {
 }
 
 .field label{
-  width: 400px;
+  width: 550px;
 }
 
 .field input {
-  margin: 0 0 10px;
+  margin: 10px 0 10px;
 }
 
 .input-get-quote {
@@ -6038,6 +6039,15 @@ footer.dark p {
     flex-direction: column;
   }
 
+  .d-container__txt {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
   .home-section__d-container {
     background-color: #ffffff00;
   
@@ -6055,8 +6065,19 @@ footer.dark p {
 
 @media (max-width: 800px) {
   .home-section__video img {
-    width: 80vw;
-    height: 80vw;
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .home-section__d-container {
+    padding: 50px 15px;
+  }
+
+  .home-section__video img {
+    width: 70vw;
+    height: 70vw;
   }
 }
 
