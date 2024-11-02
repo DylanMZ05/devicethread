@@ -2357,7 +2357,9 @@ section.parallax .countdown span {
   margin-top: 80px;
 }
 #works.two-col .work-item {
-  width: 50%;
+  width: 50;
+  display: flex;
+  justify-content: center;
 }
 #works.two-col .work-item .work-info h3 {
   font-size: 17px;
