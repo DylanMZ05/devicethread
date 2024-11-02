@@ -5176,11 +5176,12 @@ footer.dark p {
 
 .why-us-title h2 {
   font-size: 36px;
-  text-align: center;
+  text-align: start;
 }
 
 .why-us-title p {
   font-size: 16px;
+  text-align: start;
 }
 
 .devicethread-lynx {
@@ -5191,7 +5192,7 @@ footer.dark p {
 }
 
 .devicethread-lynx__title {
-  text-align: center;
+  text-align: start;
   font-size: 23px;
 }
 
@@ -5212,7 +5213,7 @@ footer.dark p {
   font-size: 28px;
 
   margin-top: 7px;
-  margin-right: 5px;
+  margin-right: 15px;
   color: #2268FF;
 }
 
@@ -5240,7 +5241,7 @@ footer.dark p {
   font-size: 28px;
 
   margin-top: 7.5px;
-  margin-right: 5px;
+  margin-right: 15px;
   color: #2268FF;
 }
 
@@ -5254,6 +5255,10 @@ footer.dark p {
   background-position: center 35%;
 
   padding: 0;
+}
+
+.text-start {
+  text-align: start !important;
 }
 
 .black-cover {
@@ -5794,6 +5799,11 @@ footer.dark p {
 
 .nav_2 {
   display: flex;
+}
+
+.nav_2-center {
+  display: flex;
+  justify-content: center;
 }
 
 .guest {
