@@ -6082,7 +6082,7 @@ footer.dark p {
 
 @media (max-width: 650px) {
   .home-section__d-container {
-    padding: 50px 15px;
+    padding: 0 15px 50px;
   }
 
   .home-section__video img {
