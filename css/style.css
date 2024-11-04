@@ -5713,22 +5713,46 @@ footer.dark p {
 .videos-section {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 
-  position: relative;
-  overflow: hidden;
-  max-width: 80%; /* Cambia este valor para ajustar el tamaño */
-  margin: 0 auto; /* Centra el video */
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-.videos-section nav {
-  max-width: 335px;
-  height: 300px;
-  margin: 0 30px;
-
-  padding: 15px;
-
-  border: 1px solid #e7e7e7;
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.videos-txt {
+  margin-bottom: 150px;
+  width: 300px;
+  margin-left: 35px;
+}
+
+.videos-txt hr {
+  background-color: #2268FF;
+  height: 2px;
+  width: 30px;
+  border-radius: 50px;
+  margin: 0 0px 0 3px;
+}
+
+.videos-txt h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.videos-txt p {
+  font-size: 16px;
+  font-weight: 500;
+
+  margin: 15px 0;
+}
+
+
+
 
 @media (max-width: 1200px) {
   #header-container {
@@ -5750,10 +5774,26 @@ footer.dark p {
   .videos-section {
     flex-direction: column;
     align-items: center;
+
+    max-width: 95%;
   }
 
-  .videos-section nav {
-    margin: 15px;
+  .video-container {
+    flex-direction: column-reverse;
+  }
+
+  .videos-txt {
+    margin: 0;
+    width: 500px;
+    text-align: center;
+  }
+
+  .videos-txt hr {
+    margin: 0 auto;
+  }
+
+  .video-card-hotels {
+    margin: 10px 0;
   }
 }
 
@@ -5929,6 +5969,10 @@ footer.dark p {
     width: 80vw;
     max-width: 300px;
   }
+
+  .videos-txt {
+    width: 85%;
+  }
 }
 
 /* ABOUT US */
@@ -6047,6 +6091,7 @@ footer.dark p {
 @media (max-width: 991px) {
   .home-section {
     flex-direction: column;
+    padding: 20px 0;
   }
 
   .d-container__txt {
@@ -6061,6 +6106,7 @@ footer.dark p {
   .home-section__d-container {
     background-color: #ffffff00;
   
+    padding: 0 75px 50px;
     width: 100vw;
     height: auto;
   }
