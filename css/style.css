@@ -5456,9 +5456,9 @@ footer.dark p {
   flex-direction: column;
 }
 
-.border-blue-left {
+/* .border-blue-left {
   border-left: 2px solid #2268FF;
-}
+} */
 
 .field label{
   width: 550px;
