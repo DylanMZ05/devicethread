@@ -6186,6 +6186,18 @@ footer.dark p {
 
 @media (max-width: 600px) {
   .ml-150 {
-    margin-left: 0;
+    margin-left: 22vw;
+  }
+}
+
+@media (max-width: 465px) {
+  .ml-150 {
+    margin-left: 16vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .ml-150 {
+    margin-left: 11vw;
   }
 }
