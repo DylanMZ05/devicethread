@@ -6133,3 +6133,59 @@ footer.dark p {
   background-color: #45a049;
 }
 
+.work-item {
+  width: 300px;
+}
+
+#works.four-col .work-item {
+  width: 300px;
+}
+
+.work-detail {
+  width: 300px;
+}
+
+.partners-item {
+  height: 160px !important;
+  width: 300px !important;
+}
+
+.work-item i {
+  color: #2268FF;
+}
+
+.favourite-txt {
+  font-weight: 600;
+}
+
+.ml-150 {
+  margin-left: 300px;
+  margin-right: 280px;
+}
+
+@media (max-width: 1650px) {
+  .ml-150 {
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
+}
+
+@media (max-width: 850px) {
+  .ml-150 {
+    margin-left: 7vw;
+    margin-right: 2vw;
+  }
+}
+
+@media (max-width: 660px) {
+  .ml-150 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .ml-150 {
+    margin-left: 0;
+  }
+}
