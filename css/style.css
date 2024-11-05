@@ -5713,22 +5713,22 @@ footer.dark p {
 .videos-section {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 
-  max-width: 80%;
-  margin: 0 auto;
 }
 
 .video-container {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 1100px;
 }
 
 .videos-txt {
-  margin-bottom: 150px;
+  margin: 0 0.5vw 150px;
   width: 300px;
-  margin-left: 35px;
 }
 
 .videos-txt hr {
@@ -5775,7 +5775,6 @@ footer.dark p {
     flex-direction: column;
     align-items: center;
 
-    max-width: 95%;
   }
 
   .video-container {
@@ -5784,7 +5783,7 @@ footer.dark p {
 
   .videos-txt {
     margin: 0;
-    width: 500px;
+    width: 400px;
     text-align: center;
   }
 
@@ -5971,7 +5970,7 @@ footer.dark p {
   }
 
   .videos-txt {
-    width: 85%;
+    width: 250px;
   }
 }
 
