@@ -5420,8 +5420,8 @@ footer.dark p {
   padding: 10px 20px;
   font-weight: bold;
   color: #000;
-  border: 2px solid #2268FF;
-  border-radius: 8px;
+  border: 1px solid #2268FF;
+  border-radius: 2px;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 200px;
@@ -5430,7 +5430,6 @@ footer.dark p {
 .choice-option input[type="checkbox"]:checked + label {
   background-color: #2268FF;
   color: white;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
@@ -5472,15 +5471,29 @@ footer.dark p {
   margin: 10px 0 20px;
   background: #2268ff;
   color: #ffffff;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 8px 17px;
+  border-radius: 2px;
   font-size: 16px;
   letter-spacing: 2px;
   font-weight: 500;
   transition: all 0.3s ease;
   line-height: 20px;
-  border: 1px solid #0000001a;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border: none;
+}
+
+.quote-title {
+  margin: 0 0 2px;
+  font-weight: 600;
+}
+
+.quote-hr {
+  width: 100%;
+  margin: 4px 0;
+}
+
+.quote-options {
+  font-weight: 600;
+  color: #2268FF;
 }
 
 @media (max-width: 1288px) {

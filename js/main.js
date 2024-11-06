@@ -822,13 +822,23 @@ const publicKey = 'BLQuDFBEADiFyZexA';
     document.getElementById('getQuoteButton').addEventListener('click', function() {
       // Verificar si al menos un checkbox está seleccionado
       const checkboxes = document.querySelectorAll('.choices input[type="checkbox"]');
-      const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-
-      if (isChecked) {
-        // Si hay al menos un checkbox seleccionado, mostrar el modal
+      const selectedOptions = [];
+      
+      checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          selectedOptions.push(checkbox.nextElementSibling.innerText); // Captura el texto del label
+        }
+      });
+    
+      if (selectedOptions.length > 0) {
+        // Actualizar el contenido del modal con las opciones seleccionadas
+        document.getElementById('selected-options-display').innerText = `${selectedOptions.join(' - ')}`;
+    
+        // Mostrar el modal
         $('#myModal-10').modal('show');
       } else {
-        // Si no hay selección, mostrar un mensaje
+        // Mostrar un mensaje si no hay selección
         alert('Please select at least one option before continuing.');
       }
     });
+    
