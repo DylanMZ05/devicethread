@@ -5803,7 +5803,8 @@ footer.dark p {
 
 .videos-txt i {
   color: #2268FF;
-  margin-top: 1px;
+  margin-top: 2px;
+  margin-left: -3px;
 }
 
 
