@@ -5270,6 +5270,7 @@ footer.dark p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .videos-title h3 {
@@ -5282,6 +5283,7 @@ footer.dark p {
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
+  background-color: #fff;
   border-radius: 10px;
 
   margin: 50px 10px;
@@ -5729,6 +5731,7 @@ footer.dark p {
   align-items: center;
   flex-direction: column;
 
+  background-color: rgb(223, 232, 253);
 }
 
 .video-container {
@@ -5740,9 +5743,34 @@ footer.dark p {
 }
 
 .videos-txt {
-  margin: 0 0.5vw 150px;
-  width: 300px;
+  margin: 0 2vw 0 0vw ;
+  width: 450px;
+  height: 400px;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+
+  border-bottom-right-radius: 600px;
+  border-top-right-radius: 600px;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 10px 5px 15px 0px;
+
 }
+
+.white-box {
+  position: absolute;
+  left: 0;
+  width: calc(40vw);
+  height: 400px;
+  background-color: #fff;
+  z-index: -1;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 10px 5px 15px 0px;
+}
+
 
 .videos-txt hr {
   background-color: #2268FF;
@@ -5752,20 +5780,43 @@ footer.dark p {
   margin: 0 0px 0 3px;
 }
 
-.videos-txt h5 {
-  font-size: 24px;
+.videos-txt h3 {
+  font-size: 18px;
   font-weight: 600;
+  margin-top: 0;
+  display: flex;
 }
 
 .videos-txt p {
   font-size: 16px;
   font-weight: 500;
 
-  margin: 15px 0;
+  margin: 15px 55px 0px 0;
+}
+
+.videos-txt h5 {
+  font-size: 26px;
+  font-weight: 600;
+
+  margin: 5px 35px 20px 0;
+}
+
+.videos-txt i {
+  color: #2268FF;
+  margin-top: 1px;
 }
 
 
-
+@media (max-width: 1290px) {
+  .white-box {
+    position: absolute;
+    left: 0;
+    width: calc(20vw);
+    height: 400px;
+    background-color: #fff;
+    z-index: -1;
+  }
+}
 
 @media (max-width: 1200px) {
   #header-container {
@@ -5791,13 +5842,14 @@ footer.dark p {
   }
 
   .video-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .videos-txt {
     margin: 0;
     width: 400px;
     text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
 
   .videos-txt hr {
@@ -5806,6 +5858,30 @@ footer.dark p {
 
   .video-card-hotels {
     margin: 10px 0;
+  }
+
+  .videos-txt {
+    margin: 0;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    border-radius: 600px;
+
+  }
+
+  .videos-txt h5,
+  .videos-txt p {
+    margin: 20px;
+  }
+
+  .white-box {
+    display: none;
   }
 }
 
@@ -5982,9 +6058,7 @@ footer.dark p {
     max-width: 300px;
   }
 
-  .videos-txt {
-    width: 250px;
-  }
+
 }
 
 /* ABOUT US */
@@ -6246,11 +6320,21 @@ footer.dark p {
   .ml-150 {
     margin-left: 22vw;
   }
+
+  .videos-txt {
+    margin: 25px 0;
+    background-color: #fff;  
+  }
 }
 
 @media (max-width: 465px) {
   .ml-150 {
     margin-left: 16vw;
+  }
+
+  .videos-txt {
+    width: 100vw;
+    border-radius: 0;
   }
 }
 
