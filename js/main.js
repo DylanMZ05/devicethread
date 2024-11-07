@@ -842,3 +842,15 @@ const publicKey = 'BLQuDFBEADiFyZexA';
       }
     });
     
+
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      initialCountry: "auto",
+      geoIpLookup: function(success, failure) {
+        fetch("https://ipinfo.io/json?token=<TU_TOKEN_IPINFO>")
+          .then((response) => response.json())
+          .then((data) => success(data.country))
+          .catch(() => success("us"));
+      },
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    });

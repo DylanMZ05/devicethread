@@ -13,7 +13,7 @@
 <link rel="icon" type="image/x-icon" href="./images/favicon.png">
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -280,27 +280,24 @@
 <div>
   <div class="modal fade" id="myModal-10" role="dialog">
     <div class="modal-dialog">
-
       <!-- Modal content-->
       <div class="modal-content" style="border-radius: 24px;">
-
         <!-- modal header  -->
         <div class="modal-header">
           <button type="button" class="close ti-close" data-dismiss="modal" style="font-size: 22px;">  </button>
-          <h3 class="modal-title">Get Quote!</h3>
+          <h3 class="modal-title">Get Your Custom Quote!</h3>
         </div>
 
         <!-- begin modal body content  -->
         <div class="modal-body pb-0">
-
-          <p>Title to Get Quote</p>
-          <p class="quote-title">You have selected: </p>
+          <p>Thank you for selecting your preferred options. Please provide your details below, and we’ll send you a tailored quote for the following plan:</p>
+          <p class="quote-title">Selected Features:</p>
           <hr class="quote-hr">
           <p id="selected-options-display" class="quote-options"></p>
 
           <form id="form">
             <div class="field">
-              <label for="from_name">Name</label>
+              <label for="from_name">Name:<span class="color-red">*</span></label>
               <input type="text" name="from_name" id="from_name">
             </div>
             <div class="field hidden">
@@ -308,23 +305,45 @@
               <input type="text" name="message" id="message">
             </div>
             <div class="field">
-              <label for="reply_to">Email</label>
-              <input type="text" name="reply_to" id="reply_to">
+              <label for="reply_to">Email<span class="color-red">*</span></label>
+              <input type="email" name="reply_to" id="reply_to">
+            </div>
+
+            <!-- Teléfono móvil -->
+            <div class="field">
+              <div class="field">
+                <label for="phone">Mobile<span class="color-red">*</span></label>
+                <input type="tel" name="phone" id="phone">
+              </div>
+            </div>
+
+            <!-- Tipo de propiedad -->
+            <div class="field">
+              <label for="property_type">What type of property do you manage?</label>
+              <select name="property_type" id="property_type">
+                <option value="Hotel">Hotel</option>
+                <option value="Bed & Breakfast">Bed & Breakfast</option>
+                <option value="Vacation Rental">Vacation Rental</option>
+                <option value="Hostel">Hostel</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Número de habitaciones -->
+            <div class="field">
+              <label for="rooms">How many rooms? Units*</label>
+              <input type="number" name="rooms" id="rooms" min="1" placeholder="e.g., 10">
             </div>
           
-            <input type="submit" id="button" class="input-get-quote" value="Get Quote" >
+            <input type="submit" id="button" class="input-get-quote" value="Get Quote">
+            <p class="txt-get-quote">Submit your request, and our team will get back to you!</p>
           </form>
-          
-          <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-          
+
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
           <script type="text/javascript">
             emailjs.init('BLQuDFBEADiFyZexA')
           </script>
-
         </div>
-
-
       </div>
     </div>
   </div>
@@ -422,8 +441,8 @@
               <ul class="list-unstyled">
                 <li> <a href="blogs.html">Blogs</a> </li>
                 <li> <a href="pressrelease.html">Press Releases</a> </li>
-                                 <li> <a href="https://kb.devicethread.com/" target="_blank">Knowledge Base Login</a></li>
-            	<li> <a href="https://kb-api.devicethread.com/" target="_blank">API Login</a></li>
+                <li> <a href="https://kb.devicethread.com/" target="_blank">Knowledge Base Login</a></li>
+            	  <li> <a href="https://kb-api.devicethread.com/" target="_blank">API Login</a></li>
               </ul>
             </div>
           </div>
@@ -480,7 +499,7 @@
         </div>
         <div class="col-md-4">
           <div class="footer-social">
-<ul>
+            <ul>
               <li> <a target="_blank" href="https://www.linkedin.com/company/devicethread/"><i class="ti-linkedin"></i></a> </li>
             </ul>
           </div>
@@ -492,11 +511,12 @@
   <!-- end of container--> 
 </footer>
 <!-- end of footer--> 
- <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script> 
 <script type="text/javascript" src="js/bundle.js"></script> 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

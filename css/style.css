@@ -5470,7 +5470,7 @@ footer.dark p {
 }
 
 .input-get-quote {
-  margin: 10px 0 20px;
+  margin: 10px 0;
   background: #2268ff;
   color: #ffffff;
   padding: 8px 17px;
@@ -5496,6 +5496,11 @@ footer.dark p {
 .quote-options {
   font-weight: 600;
   color: #2268FF;
+}
+
+.txt-get-quote {
+  margin-bottom: 13px;
+  margin-left: 3px;
 }
 
 @media (max-width: 1288px) {
@@ -6344,4 +6349,10 @@ footer.dark p {
   .ml-150 {
     margin-left: 11vw;
   }
+}
+
+.color-red {
+  color: #ff0101;
+  font-size: 25px;
+  margin-left: 3px;
 }
