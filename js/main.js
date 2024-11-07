@@ -278,7 +278,7 @@
 
       var $grid = $('#works').isotope({
         masonry: {
-         columnWidth: 0
+        columnWidth: 0
         },
         itemSelector: '.work-item'
       });
@@ -290,7 +290,7 @@
 
       $('.blog-masonry').isotope({
         masonry: {
-         columnWidth: 0
+        columnWidth: 0
         },
         itemSelector: '.masonry-post'
       });
@@ -765,7 +765,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* DYLAN ADDS */
 
-const publicKey = 'BLQuDFBEADiFyZexA';
+const publicKey = 'HX3wvg2GLL33PDX9O';
     emailjs.init(publicKey);
 
     const btn = document.getElementById('button');
@@ -775,16 +775,26 @@ const publicKey = 'BLQuDFBEADiFyZexA';
       // Validar que los campos de nombre y email estén completados
       const fromName = document.getElementById('from_name').value.trim();
       const replyTo = document.getElementById('reply_to').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const propertyType = document.getElementById('property_type').value;
+      const rooms = document.getElementById('rooms').value.trim();
       
-      if (!fromName || !replyTo) {
-        alert('Por favor, completa todos los campos requeridos.');
+      if (!fromName || !replyTo || !phone || !propertyType || !rooms) {
+        alert('Please complete all required fields.');
         return;
       }
 
       // Validar formato del email
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(replyTo)) {
-        alert('Por favor, ingresa un email válido.');
+        alert('Please enter a valid email.');
+        return;
+      }
+
+        // Validar que el reCaptcha esté completado
+      const recaptchaResponse = grecaptcha.getResponse();
+      if (recaptchaResponse.length === 0) {
+        alert('Please complete the reCAPTCHA.');
         return;
       }
 
@@ -792,19 +802,19 @@ const publicKey = 'BLQuDFBEADiFyZexA';
       const selectedOptions = [];
       const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
       checkboxes.forEach((checkbox) => {
-        selectedOptions.push(checkbox.nextElementSibling.innerText); // Obtiene el texto del label correspondiente
+        selectedOptions.push(checkbox.nextElementSibling.innerText);
       });
 
       // Construye el mensaje
-      const message = `Hello! My name is ${fromName}. \n\nI would like to get the quote of: \n${selectedOptions.join(' - ')}.`;
+      const message = `I would like to get the quote of: ${selectedOptions.join(' - ')}. | | | Phone number: ${phone}. | | | Type of property manage: ${propertyType}. | | | Rooms: ${rooms}`;
 
       // Asignar el mensaje al formulario antes de enviarlo
       document.getElementById('message').value = message;
 
       btn.value = 'Sending...';
 
-      const serviceID = 'default_service';
-      const templateID = 'template_77akf6i';
+      const serviceID = 'service_qfqx128';
+      const templateID = 'template_f5hugwg';
 
       emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
@@ -854,3 +864,10 @@ const publicKey = 'BLQuDFBEADiFyZexA';
       },
       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
     });
+
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6LceMHgqAAAAAGeKgUocxwMpInTFwkeK4-GFuW6T', {action: 'LOGIN'});
+      });
+    }

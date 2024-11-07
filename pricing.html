@@ -20,6 +20,7 @@
     <![endif]-->
 </head>
 	<!-- Google tag (gtag.js) -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVNCP0R3Q1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -291,9 +292,9 @@
         <!-- begin modal body content  -->
         <div class="modal-body pb-0">
           <p>Thank you for selecting your preferred options. Please provide your details below, and we’ll send you a tailored quote for the following plan:</p>
-          <p class="quote-title">Selected Features:</p>
-          <hr class="quote-hr">
-          <p id="selected-options-display" class="quote-options"></p>
+          <p class="quote-title margin-20">Selected Features:</p>
+          <hr class="quote-hr margin-20">
+          <p id="selected-options-display" class="quote-options margin-20"></p>
 
           <form id="form">
             <div class="field">
@@ -311,16 +312,15 @@
 
             <!-- Teléfono móvil -->
             <div class="field">
-              <div class="field">
-                <label for="phone">Mobile<span class="color-red">*</span></label>
-                <input type="tel" name="phone" id="phone">
-              </div>
+              <label for="phone">Mobile<span class="color-red">*</span></label>
+              <input type="tel" name="phone" id="phone">
             </div>
 
             <!-- Tipo de propiedad -->
             <div class="field">
-              <label for="property_type">What type of property do you manage?</label>
+              <label for="property_type" class="mt-10 mb-10">What type of property do you manage?<span class="color-red">*</span></label>
               <select name="property_type" id="property_type">
+                <option value="" selected disabled hidden class="color-gray">-Select-</option>
                 <option value="Hotel">Hotel</option>
                 <option value="Bed & Breakfast">Bed & Breakfast</option>
                 <option value="Vacation Rental">Vacation Rental</option>
@@ -329,20 +329,30 @@
               </select>
             </div>
 
+
             <!-- Número de habitaciones -->
             <div class="field">
-              <label for="rooms">How many rooms? Units*</label>
+              <label for="rooms" class="mt-10 mb-10">How many rooms?<span class="color-red">*</span></label>
               <input type="number" name="rooms" id="rooms" min="1" placeholder="e.g., 10">
             </div>
           
+            <!-- reCAPTCHA -->
+            <div class="field mt-10">
+              <div class="g-recaptcha" data-sitekey="6LevMngqAAAAAEXL1XtXJRiPL-QQXDXlJckLIDm8"></div>
+            </div>
+
             <input type="submit" id="button" class="input-get-quote" value="Get Quote">
-            <p class="txt-get-quote">Submit your request, and our team will get back to you!</p>
+            <p class="txt-get-quote text-align-c">Submit your request, and our team will get back to you!</p>
           </form>
+
+
 
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
           <script type="text/javascript">
             emailjs.init('BLQuDFBEADiFyZexA')
           </script>
+
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         </div>
       </div>
     </div>
@@ -362,7 +372,7 @@
           </div>
 
           <div class="col-md-3 col-sm-12 title center mb-50">
-            <div class="row pl-50 mobile-p-0">
+            <div class="row mobile-p-0">
               <h5><em>Success Story!</em></h5>
               <button type="button" class="btn btn-color" data-toggle="modal" data-target="#myModal2">Download</button>
             </div>

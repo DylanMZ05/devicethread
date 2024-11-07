@@ -5461,16 +5461,23 @@ footer.dark p {
   border-left: 2px solid #2268FF;
 } */
 
+.field {
+  margin: 0 20px;
+}
+
+
+
 .field label{
   width: 550px;
 }
 
 .field input {
-  margin: 10px 0 10px;
+  margin: 0 0;
+  width: 100%;
 }
 
 .input-get-quote {
-  margin: 10px 0;
+  margin: 10px auto;
   background: #2268ff;
   color: #ffffff;
   padding: 8px 17px;
@@ -5481,6 +5488,12 @@ footer.dark p {
   transition: all 0.3s ease;
   line-height: 20px;
   border: none;
+  display: block;
+}
+
+.input-get-quote:hover {
+  background: #0554ff;
+  color: #ffeaea;
 }
 
 .quote-title {
@@ -5489,7 +5502,7 @@ footer.dark p {
 }
 
 .quote-hr {
-  width: 100%;
+  width: 93%;
   margin: 4px 0;
 }
 
@@ -5501,6 +5514,11 @@ footer.dark p {
 .txt-get-quote {
   margin-bottom: 13px;
   margin-left: 3px;
+}
+
+.margin-20 {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 @media (max-width: 1288px) {
@@ -6355,4 +6373,12 @@ footer.dark p {
   color: #ff0101;
   font-size: 25px;
   margin-left: 3px;
+}
+
+.color-gray {
+  color: #969696;
+}
+
+.text-align-c {
+  text-align: center;
 }
