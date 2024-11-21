@@ -871,3 +871,4 @@ const publicKey = 'HX3wvg2GLL33PDX9O';
         const token = await grecaptcha.enterprise.execute('6LceMHgqAAAAAGeKgUocxwMpInTFwkeK4-GFuW6T', {action: 'LOGIN'});
       });
     }
+

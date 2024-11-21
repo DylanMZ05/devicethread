@@ -6409,3 +6409,31 @@ footer.dark p {
     width: max-content;
   }
 }
+
+.stackai-container {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+iframe, .stackai-widget {
+  width: 600px !important; /* Sobrescribe cualquier regla previa */
+  height: 100% !important;
+  max-width: none !important; /* Asegúrate de que no haya restricciones */
+}
+
+@media (max-width: 600px) {
+  iframe, .stackai-widget {
+    width: 400px !important; /* Sobrescribe cualquier regla previa */
+    height: 100% !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  iframe, .stackai-widget {
+    width: 100vw !important; /* Sobrescribe cualquier regla previa */
+    height: 100% !important;
+    max-width: none !important;
+  }
+}
