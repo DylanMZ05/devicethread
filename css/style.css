@@ -6417,14 +6417,16 @@ footer.dark p {
 }
 
 iframe, .stackai-widget {
-  width: 600px !important; /* Sobrescribe cualquier regla previa */
-  height: 100% !important;
-  max-width: none !important; /* Asegúrate de que no haya restricciones */
+  transform: translate(57px, 89px) scale(.75);
+  width: 400px !important;
+  height: 650px !important;
+  max-width: none !important;
+
 }
 
 @media (max-width: 600px) {
   iframe, .stackai-widget {
-    width: 400px !important; /* Sobrescribe cualquier regla previa */
+    width: 400px !important;
     height: 100% !important;
     max-width: none !important;
   }
@@ -6432,7 +6434,7 @@ iframe, .stackai-widget {
 
 @media (max-width: 400px) {
   iframe, .stackai-widget {
-    width: 100vw !important; /* Sobrescribe cualquier regla previa */
+    width: 100vw !important;
     height: 100% !important;
     max-width: none !important;
   }
