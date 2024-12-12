@@ -502,6 +502,16 @@
     src="https://unpkg.com/react-stackai@latest/dist/vanilla/vanilla-stackai.js"
     data-project-url="https://www.stack-ai.com/embed/01fc5099-536a-4cc5-875b-c0b92f16e6da/80fab60d-4b33-443f-af9c-dd1246eb093b/67321fd9c9611debe596f03b">
   </script>
+  <script>
+    document.getElementById('toggle-widget').addEventListener('click', function () {
+      const widgetContainer = document.querySelector('.flex'); // Ajusta el selector si es necesario
+      if (widgetContainer.style.display === 'none' || widgetContainer.style.display === '') {
+        widgetContainer.style.display = 'flex'; // Muestra el widget
+      } else {
+        widgetContainer.style.display = 'none'; // Oculta el widget
+      }
+    });
+  </script>
 </body>
 
 </html>

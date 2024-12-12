@@ -6417,12 +6417,13 @@ footer.dark p {
 }
 
 iframe, .stackai-widget {
-  transform: translate(57px, 89px) scale(.75);
+  transform: translate(38px, 56px) scale(.85);
   width: 400px !important;
   height: 650px !important;
   max-width: none !important;
-
 }
+
+
 
 @media (max-width: 600px) {
   iframe, .stackai-widget {
