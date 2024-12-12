@@ -6184,7 +6184,7 @@ footer.dark p {
   display: inline-block;
   padding: 10px 20px;
   color: #fff;
-  background-color: #2268FF; /* Ajusta el color del botón */
+  background-color: #2268FF;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
@@ -6193,7 +6193,7 @@ footer.dark p {
 }
 
 .home-section__button a:hover {
-  background-color: #004bb5; /* Efecto hover */
+  background-color: #004bb5;
 }
 
 
@@ -6311,30 +6311,8 @@ footer.dark p {
   background-color: #45a049;
 }
 
-.work-item {
-  width: 300px;
-}
 
-#works.four-col .work-item {
-  width: 300px;
-}
 
-.work-detail {
-  width: 300px;
-}
-
-.partners-item {
-  height: 160px !important;
-  width: 300px !important;
-}
-
-.work-item i {
-  color: #2268FF;
-}
-
-.favourite-txt {
-  font-weight: 600;
-}
 
 .ml-150 {
   margin-left: 300px;
