@@ -303,7 +303,7 @@
               <div class="widget">
                 <h6 class="upper">Categories</h6>
                 <ul class="nav">
-                  <li><a href="#" data-filter="*">ALL</a></li>
+                  <li><a href="#" data-filter="all" class="active">ALL</a></li>
                   <li><a href="#" data-filter="pms">PMS</a></li>
                   <li><a href="#" data-filter="smart-lock-platforms">Smart Lock Platforms</a></li>
                   <li><a href="#" data-filter="smart-lock-models">Smart Lock Models</a></li>
@@ -879,25 +879,26 @@
         const filtersGroup1 = document.querySelectorAll("#filters li");
         const filtersGroup2 = document.querySelectorAll(".nav li a");
         const workItems = document.querySelectorAll(".work-item");
-    
-        let selectedFilter1 = "*"; // Filtro del primer grupo
-        let selectedFilter2 = "*"; // Filtro del segundo grupo
-    
+      
+        let selectedFilter1 = "*"; // Por defecto, seleccionamos "ALL"
+        let selectedFilter2 = "*"; // Por defecto, seleccionamos "ALL"
+      
+        // Función para filtrar los elementos
         function filterItems() {
           workItems.forEach((item) => {
             const matchesFilter1 =
               selectedFilter1 === "*" || item.classList.contains(selectedFilter1);
             const matchesFilter2 =
               selectedFilter2 === "*" || item.classList.contains(selectedFilter2);
-    
+          
             if (matchesFilter1 && matchesFilter2) {
-              item.style.display = "flex";
+              item.style.opacity = "1";
             } else {
-              item.style.display = "none";
+              item.style.opacity = "0.2";
             }
           });
         }
-    
+      
         // Manejar eventos para el primer grupo de filtros
         filtersGroup1.forEach((filter) => {
           filter.addEventListener("click", function () {
@@ -907,7 +908,7 @@
             filterItems();
           });
         });
-    
+      
         // Manejar eventos para el segundo grupo de filtros
         filtersGroup2.forEach((filter) => {
           filter.addEventListener("click", function (event) {
@@ -918,6 +919,9 @@
             filterItems();
           });
         });
+      
+        // Filtrar por defecto al cargar la página
+        filterItems(); // Esto asegura que se muestren todos los elementos
       });
     </script>
   </body>

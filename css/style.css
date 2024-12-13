@@ -6419,3 +6419,12 @@ iframe, .stackai-widget {
   }
 }
 
+#works {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.work-item {
+  flex: 1 0 calc(25% - 20px);
+}
